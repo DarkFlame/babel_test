@@ -1,32 +1,62 @@
 'use strict';
 
-var _promise = require('babel-runtime/core-js/promise');
+var _asyncToGenerator2 = require('babel-runtime/helpers/asyncToGenerator');
 
-var _promise2 = _interopRequireDefault(_promise);
-
-var _assign = require('babel-runtime/core-js/object/assign');
-
-var _assign2 = _interopRequireDefault(_assign);
+var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 
 var _map = require('babel-runtime/core-js/map');
 
 var _map2 = _interopRequireDefault(_map);
 
+var _extends2 = require('babel-runtime/helpers/extends');
+
+var _extends3 = _interopRequireDefault(_extends2);
+
 var _values = require('babel-runtime/core-js/object/values');
 
 var _values2 = _interopRequireDefault(_values);
 
-var _extends = _assign2.default || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
-let test = (() => {
-    var _ref = _asyncToGenerator(function* () {
-        let a = yield [1, 2, 3];
-    });
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var test = function () {
+    var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+        var a;
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+            while (1) {
+                switch (_context.prev = _context.next) {
+                    case 0:
+                        _context.next = 2;
+                        return [1, 2, 3];
+
+                    case 2:
+                        a = _context.sent;
+
+                    case 3:
+                    case 'end':
+                        return _context.stop();
+                }
+            }
+        }, _callee, this);
+    }));
 
     return function test() {
         return _ref.apply(this, arguments);
     };
-})();
+}();
 
 var _fs = require('fs');
 
@@ -34,12 +64,21 @@ var _fs2 = _interopRequireDefault(_fs);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new _promise2.default(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return _promise2.default.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+var A = function A() {
+    (0, _classCallCheck3.default)(this, A);
+};
 
-class A {}
+var B = function (_A) {
+    (0, _inherits3.default)(B, _A);
 
-class B extends A {}
+    function B() {
+        (0, _classCallCheck3.default)(this, B);
+        return (0, _possibleConstructorReturn3.default)(this, (B.__proto__ || (0, _getPrototypeOf2.default)(B)).apply(this, arguments));
+    }
 
-let b = (0, _values2.default)({ a: 1 });
-let a = _extends({ b }, { c: 1 });
-let c = new _map2.default();
+    return B;
+}(A);
+
+var b = (0, _values2.default)({ a: 1 });
+var a = (0, _extends3.default)({ b }, { c: 1 });
+var c = new _map2.default();
